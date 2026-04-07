@@ -4,7 +4,7 @@ pipeline{
 
         stage('Clone Code')
         steps{
-                git 'https://github.com/your-repo/devops-demo.git'
+                git 'https://github.com/winnerJd/devops-demo.git'
         }
     }
     stage('Build Docker Image'){
@@ -14,7 +14,6 @@ pipeline{
     }
     stage('Run Container'){
         steps{
-                sh 'docker run  devops-demo'
-        }
+sh 'docker run --rm -d devops-demo'        }
     }
 }
